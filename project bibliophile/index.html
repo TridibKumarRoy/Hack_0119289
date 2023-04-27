@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css\style.css" />
+    
+
+    <title>bibliophile</title>
+  </head>
+  <body>
+    <!-- *****************navbar *******************-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navcolour">
+      <div class="container-fluid">
+        <nav class="navbar bg-body-tertiary">
+          <div class="container">
+            <a class="navbar-brand" href="index.html">
+              <img
+                src="photos\full-logo.png"
+                alt="Bibliophile"
+                width="120"
+                height="30"
+              />
+            </a>
+          </div>
+        </nav>
+
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon">
+            <img
+              src="photos\nav-tog-img.png"
+              alt="navbar-toggler-icon"
+              height="30px"
+            />
+          </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="donate.html">Donate</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="all-books.html">All Books</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Help
+              </a>
+              <ul class="dropdown-menu bg-primary">
+                <li>
+                  <a class="dropdown-item" href="About_Us.html">About Us</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Contact_Us.html">Contact Us</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="help.html">help</a></li>
+              </ul>
+            </li>
+
+            <!-- <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li> -->
+          </ul>
+
+          <!-- *************************login and signup  ************************* -->
+
+
+
+
+          <div class="col-md-3 text-end">
+            <button
+              type="button"
+              class="btn btn-outline-primary me-2"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              Login
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#signupModal"
+            >
+              Sign-up
+            </button>
+          </div>
+
+          <!-- Login Modal -->
+          <div
+            class="modal fade"
+            id="loginModal"
+            tabindex="-1"
+            aria-labelledby="loginModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <!-- Login Form -->
+                  <form id="loginForm">
+                    <div class="mb-3">
+                      <label for="loginEmail" class="form-label"
+                        >Email address</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="loginEmail"
+                        aria-describedby="emailHelp"
+                        required
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="loginPassword" class="form-label"
+                        >Password</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="loginPassword"
+                        required
+                      />
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                      Submit
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Signup Modal -->
+          <div
+            class="modal fade"
+            id="signupModal"
+            tabindex="-1"
+            aria-labelledby="signupModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="signupModalLabel">Sign-up</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <!-- Signup Form -->
+                  <form>
+                    <div class="mb-3">
+                      <label for="signupName" class="form-label"
+                        >Full Name</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="signupName"
+                        required
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="signupEmail" class="form-label"
+                        >Email address</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="signupEmail"
+                        aria-describedby="emailHelp"
+                        required
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="signupPassword" class="form-label"
+                        >Password</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="signupPassword"
+                        required
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      id="signupSubmitButton"
+                      class="btn btn-primary"
+                    >
+                      Submit
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- *************************login and signup  ************************* -->
+
+          <!-- <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> -->
+        </div>
+      </div>
+    </nav>
+
+    <!-- *****************navbar *******************-->
+
+    <!-- *************slide/Carousel ************* -->
+    <!-- <div class="photo-slide">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="https://buddhify.com/wp-content/uploads/2018/07/iStock-689785084.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="https://buddhify.com/wp-content/uploads/2018/07/iStock-689785084.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://buddhify.com/wp-content/uploads/2018/07/iStock-689785084.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div></div> -->
+    <!-- *************slide/Carousel ************* -->
+
+    <!-- *************content ************* -->
+    <div class="container home-cnt">
+      <div class="row">
+        <div class="col-md-12 col-lg-6 col-sm-12 home-cnt-box">
+          <h1>Benefits of Bibliophile</h1>
+          <hr class="bg-light" />
+          1. Promote literacy and education: By donating books through our
+          website, you are helping to promote literacy and education by ensuring
+          that books are accessible to all, regardless of their socioeconomic
+          background. <br />
+
+          2. Help those in need: Your book donations will be distributed to
+          schools, libraries, community centers, and other institutions that
+          serve disadvantaged communities, providing much-needed resources to
+          those who may not have easy access to books. <br />
+
+          3. Reduce waste: By donating your old books, you are helping to reduce
+          waste and contribute to a more sustainable future. Rather than
+          throwing away books, you can give them a second life and put them to
+          good use. <br />
+
+          4. Easy and convenient: Our website makes it easy and convenient to
+          donate books. You can simply visit our website, enter your
+          information, and ship your books to the designated address - it's that
+          simple! <br />
+
+          5. Make a difference: Every book donation makes a difference, no
+          matter how small. By donating your books through our website, you can
+          make a positive impact on someone's life and help to promote a love of
+          reading and learning. <br />
+
+          6. Join a community: By donating through our website, you are joining
+          a community of people who share a common goal of promoting literacy
+          and education. Together, we can make a difference and help to create a
+          better future for everyone. <br />
+
+          7. Track your donations: Our website provides a way for you to track
+          the progress of your donations and see the impact you are making. You
+          can see where your books are going and how they are being used,
+          providing a sense of satisfaction and accomplishment. <br />
+
+          8. Spread the word: By using our website, you can help to spread the
+          word about the importance of promoting literacy and education.
+          Encourage your friends and family to donate their books and help to
+          make a difference in their communities. <br />
+
+          9. Make a monetary donation: In addition to donating your books, you
+          can also make a monetary donation to support our organization's
+          mission and help us to continue to provide valuable resources to those
+          in need. <br />
+
+          10. Start a book drive: Our website provides resources for individuals
+          or organizations who are interested in starting their own book
+          donation programs. We can help you to get started and provide support
+          along the way, helping you to make a difference in your own community.
+          <br />
+        </div>
+
+        <div class="col-md-12 col-lg-5 col-sm-12 home-cnt-box">
+          <h1>Title</h1>
+          <hr class="bg-light" />
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam,
+          repellendus magni? Inventore temporibus molestias necessitatibus iusto
+          sunt deleniti aliquam eum unde earum consequatur, et nostrum aut alias
+          rerum reprehenderit vitae?
+        </div>
+      </div>
+    </div>
+    <!-- *************content ************* -->
+
+    <!-- ****************card **************** -->
+    <div class="container">
+      <div class="row">
+        <!-- First Card -->
+        <div class="col-md-6 col-lg-4 home-btm-card">
+          <div class="card">
+            <img
+              src="https://buddhify.com/wp-content/uploads/2018/07/iStock-689785084.jpg"
+              class="card-img-top"
+              alt="Profile Pic"
+            />
+            <div class="card-body">
+              <h5 class="card-title">All books</h5>
+              <!-- <p class="card-text">something</p> -->
+            </div>
+          </div>
+        </div>
+        <!-- Second Card -->
+        <div class="col-md-6 col-lg-4 home-btm-card">
+          <div class="card">
+            <img
+              src="https://buddhify.com/wp-content/uploads/2018/07/iStock-689785084.jpg"
+              class="card-img-top"
+              alt="Profile Pic"
+            />
+            <div class="card-body">
+              <h5 class="card-title">books</h5>
+              <!-- <p class="card-text">somethinf</p> -->
+            </div>
+          </div>
+        </div>
+        <!-- Third Card -->
+        <div class="col-md-6 col-lg-4 home-btm-card">
+          <div class="card">
+            <img
+              src="https://buddhify.com/wp-content/uploads/2018/07/iStock-689785084.jpg"
+              class="card-img-top"
+              alt="Profile Pic"
+            />
+            <div class="card-body">
+              <h5 class="card-title">books</h5>
+              <!-- <p class="card-text">something</p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ****************card **************** -->
+
+    <!--   **************************FOOTER **************************  -->
+
+    <footer class="bg-dark py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5 class="mb-3 text-light">Mail Us:</h5>
+            <hr class="bg-light" />
+            <ul class="list-unstyled text-light">
+              <li>
+                <a href="mailto:tridibroy3012004@gmail.com" class="text-light"
+                  >Tridib Kr. Roy - tridibroy3012004@gmail.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="mailto:vickybhattacharya19@gmail.com"
+                  class="text-light"
+                  >Vicky Bhattacharya - vickybhattacharya19@gmail.com</a
+                >
+              </li>
+              <li>
+                <a href="mailto:123saptarsi@gmail.com" class="text-light"
+                  >Saptarsi Das - 123saptarsi@gmail.com</a
+                >
+              </li>
+              <li>
+                <a href="mailto:debaratipoddar143@gmail.com" class="text-light"
+                  >Debarati - debaratipoddar143@gmail.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="mailto:chakrabortytapas615@gmail.com"
+                  class="text-light"
+                  >Rupam - chakrabortytapas615@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h5 class="mb-3 text-light">About Bibliophile</h5>
+            <hr class="bg-light" />
+            <p class="mb-0 text-light">
+              Bibliophile is an online book donating/collecting platform, where
+              every student of a specific university college can donate or
+              collect the book they need. This makes it easy for each student to
+              collect any book without much hurdle and saves their essential
+              money by borrowing their senior's books if they are willing to.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-3 text-center">
+        <hr class="bg-light" />
+        <p class="mb-0 text-light">
+          &copy; 2023 Bibliophile. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- *******************************footer************************** -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+
+
+    <script src="js\script.js"></script>
+    
+  </body>
+</html>
