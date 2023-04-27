@@ -6,6 +6,7 @@ body{
    margin: 0px;
    
 }
+ 
 
 .home-cnt{
   padding: 20px;
@@ -64,10 +65,10 @@ body{
   
 /* **************navbar************** */
 
-
+/* 
 .photo-slide{
   margin: 10px ;
-}
+} */
 
 
 
@@ -130,9 +131,9 @@ footer {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #d6d6d6;
   border-radius: 5px;
-  background-color: #f8f8f8;
+  background-color: #e4e8ff;
 }
 
 .form-container label {
@@ -155,11 +156,11 @@ footer {
   font-size: 16px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  background-color: #fff;
+  background-color: #e6f8fc;
 }
 
 .form-container select option {
-  color: #000;
+  color: #0e0e0e;
 }
 
 .form-container textarea {
@@ -184,13 +185,13 @@ footer {
   font-weight: bold;
   border-radius: 5px;
   border: none;
-  background-color: #007bff;
+  background-color: #046ee0;
   color: #fff;
   
 }
 
 .form-container input[type="submit"]:hover {
-  background-color: #0062cc;
+  background-color: #004186;
   cursor: pointer;
 }
 
