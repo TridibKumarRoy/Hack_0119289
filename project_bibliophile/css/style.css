@@ -32,6 +32,18 @@ body{
   margin-bottom: 30px;
 }
 
+.memb_btn_mer{
+  margin-bottom: 20px;
+
+}
+.collect_book{
+border: 0px;
+border-radius: 10px;
+color: azure;
+background-color: rgb(88, 96, 168);
+padding: 10px 20px;
+}
+
 .book-card{
   /* display: inline; */
   /* width: 200px; */
